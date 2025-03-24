@@ -55,13 +55,13 @@ db/migrations/new:
 .PHONY: db/migrations/up
 db/migrations/up:
 	echo 'Running Up migrations...'
-	migrate -path=./internal/database/migrations -database "postgres://admin:secret@tune-trolley.orb.local:5432/tune_trolley_db?sslmode=disable&search_path=public" up
+	migrate -path=./internal/database/migrations -database "postgres://admin:npg_1WnBsiykD2mS@ep-lucky-bar-a1xj1d5i.ap-southeast-1.pg.koyeb.app/koyebdb" up
 	
 ## db/migrations/down: apply all database down migrations
 .PHONY: db/migrations/down
 db/migrations/down:
 	@echo 'Running Down migrations...'
-	migrate -path=./internal/database/migrations -database "postgres://admin:secret@tune-trolley.orb.local:5432/tune_trolley_db?sslmode=disable&search_path=public" down
+	migrate -path=./internal/database/migrations -database "postgres://admin:npg_1WnBsiykD2mS@ep-lucky-bar-a1xj1d5i.ap-southeast-1.pg.koyeb.app/koyebdb" down
 
 .PHONY: db/migrations/reload
 db/migrations/reload: db/migrations/down db/migrations/up
